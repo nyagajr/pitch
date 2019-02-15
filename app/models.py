@@ -108,25 +108,10 @@ class Pitch(db.Model):
         category = Pitch.query.filter_by(pitch_category=cat).order_by('-id').all()
         return category
 
-#
-# class Comment(db.Model):
-#     __tablename__='comments'
-#
-#     id = db.Column(db.Integer,primary_key=True)
-#     comment_content = db.Column(db.String())
-#     pitch_id = db.Column(db.Integer)
-#     user_id = db.Column(db.Integer,db.ForeignKey('users.id'))
-#
-#     def save_comment(self):
-#         db.session.add(self)
-#         db.session.commit()
-#
-#     @classmethod
-#     def get_comments(cls,id):
-#         comments = Comment.query.filter_by(pitch_id=id).all()
-#         return comments
+
 class Comment(db.Model):
     __tablename__='comments'
+
     id = db.Column(db.Integer,primary_key=True)
     comment_content = db.Column(db.String())
     pitch_id = db.Column(db.Integer)
