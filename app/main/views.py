@@ -3,6 +3,8 @@
 # from .forms import ReviewForm , PitchFormP, PitchFormI, PitchFormL, CommentForm
 # from ..models import User, Pitch, Review,Comment
 # from flask_login import login_required, current_user
+from ..models import User, Pitch, Review,Comment
+from flask_login import login_required, current_user
 
 # Views
 @main.route('/')
