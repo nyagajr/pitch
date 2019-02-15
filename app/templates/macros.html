@@ -1,0 +1,25 @@
+{% macro displayComments(my_comments) %}
+{% for comment in my_comments %}
+<hr>
+<div class="comment">
+  <p>
+    <a href="/user/{{comment.user.username}}&{{comment.user.id}}">{{comment.user.username|capitalize}}</a>
+  </p>
+  <p>{{comment.comment_content}}</p>
+</div>
+{% endfor %} {% endmacro %}
+
+{% macro displayPitches(my_pitches) %}
+{% for pitch in my_pitches %}
+<div class="col-md-12 fmtxt">
+
+  <p>{{pitch.pitch_content}}</p>
+  <ul class="list-inline">
+    <li class="list-inline-item">
+      <a href="/pitch/{{pitch.id}}">Add Comment</a>
+    </li>
+  </ul>
+  <hr>
+</div>
+{% endfor %}
+{% endmacro %}

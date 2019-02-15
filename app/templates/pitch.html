@@ -1,0 +1,29 @@
+{% extends 'base.html' %}
+{% import 'bootstrap/wtf.html' as wtf %}
+{% import 'macros.html' as macro %}
+
+{% block content %}
+<div class="container">
+  <div class="row">
+    <div class="col-md-2"></div>
+    <div class="col-md-8 comments">
+      <h4>
+        <a href="/user/{{pitch.user.username}}&{{pitch.user.id}}">{{pitch.user.username|capitalize}}</a>
+      </h4>
+      <p class="pitch-content">{{pitch.pitch_content}}</p>
+      <hr>
+      {{wtf.quick_form(comment_form)}}
+      <!-- {{simplemde.load}} -->
+      <ul class="list-inline">
+
+      </ul>
+      <ul class="list-inline">
+
+      </ul>
+      {{macro.displayComments(comments)}}
+    </div>
+    <hr>
+    <div class="col-md-2"></div>
+  </div>
+</div>
+{% endblock %}
