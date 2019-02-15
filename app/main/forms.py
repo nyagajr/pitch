@@ -12,21 +12,17 @@ class CommentForm(FlaskForm):
     comment = TextAreaField('Comment', validators=[Required()])
     submit = SubmitField('Post Comment')
 
-class PitchFormI(FlaskForm):
-    pitch = TextAreaField('Pitch Comment', validators=[Required()])
-    my_category = SelectField('Category', choices=[('Interview','Interview')])
-    submit = SubmitField('Submit')
-
-class PitchFormL(FlaskForm):
-    pitch = TextAreaField('Pitch Comment', validators=[Required()])
-    my_category = SelectField('Category', choices=[('PickupLine','PickupLine')])
-    submit = SubmitField('Submit')
-
-class PitchFormP(FlaskForm):
-    pitch = TextAreaField('Pitch Comment', validators=[Required()])
-    my_category = SelectField('Category', choices=[('Promotion','Promotion')])
-    submit = SubmitField('Submit')
 # class PitchFormI(FlaskForm):
 #     pitch = TextAreaField('Pitch Comment', validators=[Required()])
 #     my_category = SelectField('Category', choices=[('Interview','Interview')])
+#     submit = SubmitField('Submit')
+#
+# class PitchFormL(FlaskForm):
+#     pitch = TextAreaField('Pitch Comment', validators=[Required()])
+#     my_category = SelectField('Category', choices=[('PickupLine','PickupLine')])
+#     submit = SubmitField('Submit')
+#
+# class PitchFormP(FlaskForm):
+#     pitch = TextAreaField('Pitch Comment', validators=[Required()])
+#     my_category = SelectField('Category', choices=[('Promotion','Promotion')])
 #     submit = SubmitField('Submit')
